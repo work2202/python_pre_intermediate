@@ -1,0 +1,53 @@
+print("Please enter your order cost :")
+cost = int(input())
+print("Please enter your payment:")
+payment = int(input())
+change = payment - cost #Calculate change
+modulo = int(change) #Balance between change and money given out
+amount_5000 = 0 #Variable for amount of 5000s
+amount_2000 = 0 #Variable for amount of 2000s
+amount_1000 = 0 #Variable for amount of 1000s
+amount_500 = 0 #Variable for amount of 500s
+amount_200 = 0 #Variable for amount of 200s
+amount_100 = 0 #Variable for amount of 100s
+amount_50 = 0 #Variable for amount of 50s
+amount_10 = 0 #Variable for amount of 10s
+amount_5 = 0 #Variable for amount of 5s
+amount_2 = 0 #Variable for amount of 2s
+amount_1 = 0 #Variable for amount of 1s
+while modulo > 1: #Check the possibility of issuing the balance of change in the specified denominations of banknotes/coins
+    if modulo >= 5000:
+        amount_5000 = amount_5000 + modulo // 5000
+        modulo = modulo - amount_5000 * 5000
+    elif modulo >= 2000:
+        amount_2000 = amount_2000 + modulo // 2000
+        modulo = modulo - amount_2000 * 2000
+    elif modulo >= 1000:
+        amount_1000 = amount_1000 + modulo // 1000
+        modulo = modulo - amount_1000 * 1000
+    elif modulo >= 500:
+        amount_500 = amount_500 + modulo // 500
+        modulo = modulo - amount_500 * 500
+    elif modulo >= 200:
+        amount_200 = amount_200 + modulo // 200
+        modulo = modulo - amount_200 * 200
+    elif modulo >= 100:
+        amount_100 = amount_100 + modulo // 100
+        modulo = modulo - amount_100 * 100
+    elif modulo >= 50:
+        amount_50 = amount_50 + modulo // 50
+        modulo = modulo - amount_50 * 50
+    elif modulo >= 10:
+        amount_10 = amount_10 + modulo // 10
+        modulo = modulo - amount_10 * 10
+    elif modulo >= 5:
+        amount_5 = amount_5 + modulo // 5
+        modulo = modulo - amount_5 * 5
+    elif modulo >= 2:
+        amount_2 = amount_2 + modulo // 2
+        modulo = modulo - amount_2 * 2
+if modulo == 1: #Check for the last 1 coin
+    amount_1 = 1
+print("5000s:", amount_5000, ", 2000s:", amount_2000, ", 1000s:", amount_1000, ", 500s:", 
+    amount_500, ", 200s:", amount_200, ", 100s:", amount_100, ", 50s:", amount_50, 
+    ", 10s:", amount_10, ", 5s:", amount_5, ", 2s:", amount_2, ", 1s:", amount_1, ".") #Output quantity of specified denominations of banknotes/coins in change
