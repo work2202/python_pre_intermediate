@@ -1,0 +1,13 @@
+print ("Please enter the X number, then press Enter:")
+x = int(input()) #Enter Х
+list=[] #Define list of prime numbers less then Х
+for i in range(2, x+1): #Add to the list all prime numbers less than X
+    for j in list:
+        if i % j == 0:
+            break
+    else:
+        list.append(i)
+sum = 0 #Define variable for the sum of all prime numbers less than X
+for k in list: #Sum elements of the list
+    sum = sum + k
+print("Сумма простых чисел, не превосходящих Х:", sum) #Выводим сумму простых чисел, не превосходящих Х
