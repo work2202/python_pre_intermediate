@@ -10,4 +10,4 @@ for i in range(2, x+1): #Add to the list all prime numbers less than X
 sum = 0 #Define variable for the sum of all prime numbers less than X
 for k in list: #Sum elements of the list
     sum = sum + k
-print("Сумма простых чисел, не превосходящих Х:", sum) #Выводим сумму простых чисел, не превосходящих Х
+print("the sum of all prime numbers less than X:", sum) #Output
