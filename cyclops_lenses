@@ -1,0 +1,17 @@
+print("Please enter the number of cyclops, then press Enter:")
+n = int(input()) #Number of cyclops
+print("Please enter recommended optical power of lenses for each cyclops, then press Enter:")
+N = map(int, input().split()) #Recommended optical power of lenses for each cyclops
+N = sorted(N) #Ascending sort list of diopters
+i = 0 #Iterator
+amount = 0 #Minimal amount of lenses
+#Trying to make pairs of cyclops neighboring by eyesight, starting with the most short-sighted cyclops. For couples, one pair of lenses will be purchased.
+#If it is impossible to make a couple of two neighboring cyclops, we buy a second pair of lenses.
+while i < n:  
+    if i + 1 < n and N[i + 1] - N[i] <= 2:
+        amount += 1
+        i += 2
+    else:
+        amount += 1
+        i += 1
+print("Minimal amount of lenses pairs:", amount) #Output minimal amount of lenses pairs.
